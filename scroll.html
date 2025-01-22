@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ball Animation</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    .line {
+      position: relative;
+      width: 2px;
+      height: 50px;
+      background-color: #00fff5;
+      transform: rotate(0deg);
+    }
+
+    .ball {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #00fff5;
+      border-radius: 50%;
+      top: -8px;
+      left: -4px; /* Center the ball on the line */
+      animation: moveBall 2s infinite;
+    }
+
+    .scroll-text {
+      color: #00fff5;
+      font-size: 11px;
+      margin-left: 2px;
+      transform: rotate(90deg);
+      font-family: 'Exo', sans-serif;
+    }
+
+    @keyframes moveBall {
+      0% {
+        opacity: 0.3;
+        transform: translateY(0);
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0.3;
+        transform: translateY(50px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="line">
+      <div class="ball"></div>
+    </div>
+    <div class="scroll-text">Scroll</div>
+  </div>
+</body>
+</html>
