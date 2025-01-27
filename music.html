@@ -50,10 +50,10 @@
 <body>
   <span id="audioButton" class="off" onclick="toggleAudio()">
     <span id="audioText">SOUND OFF</span>
-    <i class="fas">&#xf027;</i>
+    <i class="fas">&#xf026;</i>
   </span>
-  <audio id="myAudio">
-    <source src="melody.mp3" type="audio/mpeg"> 
+  <audio id="myAudio" loop>
+    <source src="https://Saurinnn.github.io/planet/melody.mp3" type="audio/mpeg"> 
     Your browser does not support the audio element.
   </audio>
 
@@ -68,11 +68,13 @@
         audio.play(); // 再生
         audioText.textContent = 'SOUND ON'; // 文字列のみを変更
         button.className = "on"; // クラスを変更してスタイル適用
+        icon.textContent = '\uf027';
         icon.className = "fas on"; // アイコンのクラスを変更して色を変更
       } else {
         audio.pause(); // 停止
         audioText.textContent = 'SOUND OFF'; // 文字列のみを変更
         button.className = "off"; // クラスを変更してスタイル適用
+        icon.textContent = '\uf026';
         icon.className = "fas off"; // アイコンのクラスを変更して色を変更
       }
     }

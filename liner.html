@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スクロールボックス</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+    /* ボックス全体のスタイル */
+    body{
+      background-color: #000;
+    }
+    .scroll-box {
+      width: 360px;
+      height: 32px;
+      border: 1px solid #00fff5;
+      background-color: #000;
+      overflow: hidden;
+      display: flex; /* Flexbox を有効にする */
+      align-items: center; /* 縦方向の中央揃え */
+      position: relative;
+    }
+
+    /* スクロールさせるテキスト */
+    .scroll-text {
+      display: inline-block;
+      font-size: 14px;
+      font-family: "Exo", sans-serif;
+      font-weight: bold;
+      white-space: nowrap;
+      position: absolute;
+      animation: scroll 10s linear infinite;
+    }
+
+    /* 特定部分の文字色設定 */
+    .date {
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    .details {
+      color: #00fff5;
+    }
+
+    /* スクロールアニメーション */
+    @keyframes scroll {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-box">
+    <div class="scroll-text">
+      <span class="date">2030.02.02</span>
+      <span class="details"> バージョン5.6リリース：アバター・アイテム大量追加</span>
+    </div>
+  </div>
+</body>
+</html>
